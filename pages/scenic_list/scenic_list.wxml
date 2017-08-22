@@ -1,0 +1,19 @@
+<view>
+  <view wx:for="{{scenicList}}" wx:key="objectId">
+    <view class="flex item" bindtap="getScenicDetail" id="{{item.objectId}}">
+      <image src="{{item.ThumbNailUrl}}" />
+      <view class="flex_auto info">
+        <text class="name">{{item.Name}}</text>
+        <view class="tag-view">
+          <text>{{item.Tag1}}</text>
+          <text>{{item.Tag2}}</text>
+          <text class="tag-3">{{item.Tag3}}</text>
+        </view>
+        <view class="pub_date">
+        <image src="../../images/date_icon.png"></image>
+        <text class="address">{{item.PubDate}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+
+<view class="container">
+  <view class="swiper-container">
+    <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+      <block wx:for="{{movies}}" wx:for-index="index">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="hotel_detail_name">
+      <text>{{scenic.Name}}</text>
+    </view>
+  </view>
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">详情</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">住宿</view>
+
+    <!--view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">贴士</view> -->
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <swiper-item style="overflow:auto;margin-left:5px;">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </swiper-item>
+    <swiper-item >
+      <view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/0003GIIV.jpg" />
+          <view class="flex_auto info">
+            <text class="name">坪田吉祥农庄</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/0003Cihx.jpg" />
+          <view class="flex_auto info">
+            <text class="name">银杏客栈</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/nw_0003QMM7.jpg  " />
+          <view class="flex_auto info">
+            <text class="name">银杏客栈</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/0003FeIE.jpg" />
+          <view class="flex_auto info">
+            <text class="name">坪田吉祥农庄</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/0005WnjE.jpg" />
+          <view class="flex_auto info">
+            <text class="name">银杏客栈</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+        <view class="flex item">
+          <image src="https://pavo.elongstatic.com/i/mobile220_220/00065yra.jpg" />
+          <view class="flex_auto info">
+            <text class="name">银杏客栈</text>
+            <text class="score">4.3分</text>
+            <text class="address">南雄 坪田 军营寨</text>
+          </view>
+          <view class="right_wrap">
+            <view>
+              <text class="pri">¥79</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      </swiper-item>
+  </swiper>
+</view>

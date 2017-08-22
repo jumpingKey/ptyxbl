@@ -1,0 +1,64 @@
+/* pages/scenic_detail/scenic_detail.wxss */
+@import "../hotel_list/hotel_list.wxss";
+@import "/wxParse/wxParse.wxss";
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper {
+  height: 300rpx;
+  width: 100%;
+}
+
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.hotel_detail_name {
+  position: absolute;
+  left: 16rpx;
+  bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.hotel_detail_name text {
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 1rpx solid #eaeaea;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 8px;
+  background: white;
+  overflow: visible;
+}
+
+.swiper-tab-list {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  overflow: visible;
+}
+
+.on {
+  color: #da7c0c;
+  border-bottom: 5rpx solid #da7c0c;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+swiper-item {
+  background: white;
+  overflow: auto;
+}

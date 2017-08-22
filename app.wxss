@@ -1,0 +1,10 @@
+@import 'style/weui.wxss';
+@import "./style/layout.wxss";
+
+/**app.wxss**/
+
+
+.container {
+  background-color: #f2f2f2;
+  font-family: arial,Verdana, Geneva, Helvetica;
+}

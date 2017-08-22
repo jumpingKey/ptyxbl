@@ -1,0 +1,22 @@
+<view class="container">
+  <view wx:for="{{strategyList}}" wx:key="objectId">
+    <view class="item" bindtap="getStrategyDetail" id="{{item.objectId}}">
+
+      <!--image src="http://oss.ctszh.com/upload/image/2015/1021/1445417922_981802.png" />-->
+      <image src="{{item.ThumbNailUrl}} " />
+      <view class="title">
+        <text>{{item.Title}}</text>
+      </view>
+      <view class="info">
+        <view class="read_count">
+          <image src="../../images/read_count_icon.png"></image>
+          <text>{{item.VisitedTimes}}</text>
+        </view>
+        <view class="pub_date">
+          <image src="../../images/date_icon.png"></image>
+          <text>{{item.PubDate}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

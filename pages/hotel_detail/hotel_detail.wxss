@@ -1,0 +1,83 @@
+@import "../hotel_list/hotel_list.wxss";
+@import "../scenic_detail/scenic_detail.wxss";
+
+.container {
+  background-color: #f2f2f2;
+}
+
+
+text {
+  font-size: 13px;
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper {
+  height: 300rpx;
+  width: 100%;
+}
+
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.hotel_detail_name {
+  position: absolute;
+  left: 16rpx;
+  bottom: 10rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.hotel_detail_name text {
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+}
+
+.weui-cell {
+  padding: 10px 5px;
+}
+
+.facility {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.facility_item {
+  width: 33%;
+  text-align: center;
+}
+
+
+.facility image {
+  width: 16px;
+  height: 16px;
+}
+
+.facility text {
+  display: block;
+  font-size: 11px;
+}
+
+.room_info{
+  margin-top: 3px;
+}
+
+.facility_head{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.facility_head text{
+  font-size: 12px;
+}

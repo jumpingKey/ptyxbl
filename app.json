@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/hotel_list/hotel_list",
+    "pages/hotel_detail/hotel_detail",
+    "pages/scenic_list/scenic_list",
+    "pages/scenic_detail/scenic_detail",
+    "pages/strategy_list/strategy_list",
+    "pages/strategy_detail/strategy_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#ff9d00",
+    "navigationBarTitleText": "坪田银杏部落",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#ff9d00",
+    "navigationBarTitleText": "住宿详情",
+    "navigationBarTextStyle":"white"
+  }
+}

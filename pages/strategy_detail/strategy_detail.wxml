@@ -1,0 +1,22 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class="container">
+  <view class="title">
+    <text>{{strategy.Title}}</text>
+  </view>
+  <view>
+    <view class="info">
+      <view class="read_count">
+        <image src="../../images/read_count_icon.png"></image>
+        <text>{{strategy.VisitedTimes}}</text>
+      </view>
+      <view class="pub_date">
+        <image src="../../images/date_icon.png"></image>
+        <text>{{strategy.PubDate}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="content">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+</view>

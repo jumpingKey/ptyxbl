@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="scenic_recommend_head">热门景点</view>
+  <view class="scenic_recommend">
+    <block wx:for="{{hotelList}}">
+      <view class="scenic_item" bindtap="getScenicDetail">
+        <view>
+          <image src="{{item.ThumbNailUrl}}"></image>
+          <view class="content">
+            <text>{{item.HotelName}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+      <block wx:for="{{hotelList}}">
+      <view class="scenic_item" bindtap="getScenicDetail">
+        <view>
+          <image src="{{item.ThumbNailUrl}}"></image>
+          <view class="content">
+            <text>{{item.HotelName}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="page__bd">
+    <view class="weui-grids">
+      <navigator url="../scenic_list/scenic_list" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/scenery_icon.png" />
+        <view class="weui-grid__label">景点</view>
+      </navigator>
+      <navigator url="../hotel_list/hotel_list" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/hotel_icon.png" />
+        <view class="weui-grid__label">住宿</view>
+      </navigator>
+      <navigator url="../strategy_list/strategy_list" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="../../images/strategy_icon.png" />
+        <view class="weui-grid__label">攻略</view>
+      </navigator>
+    </view>
+  </view>
+  <view class="hotel">
+   <view class="hotel_recommend_head">推荐住宿</view>
+    <view wx:for="{{hotelList}}" wx:key="objectId">
+      <view class="flex item" bindtap="getHotelDetail" id="{{item.objectId}}">
+        <image src="{{item.ThumbNailUrl}}" />
+        <view class="flex_auto info">
+          <text class="name">{{item.HotelName}}</text>
+          <view>
+            <text class="score">100%</text>
+            <text> 好评</text>
+            <view class="facility" wx:if="{{item.Facilities[0] == 1}}">
+              <image src="../../images/wifi_icon.png" />
+            </view>
+            <view class="facility" wx:if="{{item.Facilities[1] == 1}}">
+              <image src="../../images/park_icon.png" />
+            </view>
+            <view class="facility" wx:if="{{item.Facilities[2] == 1}}">
+              <image src="../../images/dinner_icon.png" />
+            </view>
+          </view>
+          <text class="address">南雄 坪田 军营寨</text>
+        </view>
+        <view class="right_wrap">
+          <view>
+            <text class="c666">¥</text>
+            <text class="pri">{{item.LowRate}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <loading hidden="{{loadingHidden}}">
+    加载中...
+  </loading>
+</view>
