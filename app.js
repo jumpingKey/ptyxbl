@@ -9,7 +9,7 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     wx.navigateTo({
-      //url: 'pages/strategy_list/strategy_list',
+      url: 'pages/strategy_list/strategy_list',
       success: function(res){
         // success
       },
